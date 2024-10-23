@@ -1,5 +1,7 @@
-let askMessage = "please enter a number";
+let askMessage = "Guess the number !";
 
-function askNumber(askMessage) {
-	let givenNumber = prompt(askMessage);
+function askNumber(message) {
+	let givenNumber = Number(prompt(message));
 }
+
+askNumber(askMessage);
