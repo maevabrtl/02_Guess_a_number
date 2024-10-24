@@ -6,7 +6,6 @@ Dans `<html lang="en">`, je modifie `en` par `fr`; ce n'est pas nécessaire mais
 Pour cette même raison, je modifie le titre du document pour un titre plus clair : `<title>Guess a number</title>`.<br>
 <br>
 Je fais ensuite le lien avec mon fichier `script.js` grâce à cette ligne que j'ajoute dans ma balise `<head>` : `<script defer src="script.js"></script>`.<br>
-<br>
 > [!TIP]
 > L’attribut `defer` permet de s’assurer que tout le fichier HTML est chargé avant d’exécuter le JavaScript.
 Pour réaliser cet exercice il nous est proposé d'utiliser un [compilateur en ligne](https://js.do/), mais par habitude j'utiliserai mon IDE (*VSCode*) et son extension *Live Server* pour afficher ma page HTML en local dans mon navigateur.<br>
@@ -19,13 +18,13 @@ En-dessous de ma fonction, je l'appelle afin de pouvoir tester mon code.
 ```
 let askMessage = "Guess the number !";
 
-function askNumber(message) {
-	prompt(message);
+function askNumber() {
+	prompt(askMessage);
 }
 
-askNumber(askMessage);
+askNumber();
 ```
-2. Je déclare ensuite une variable `givenNumber` à l'intérieur de ma fonction et lui donne comme valeur le retour de ma fonction `prompt()`.<br>
+2. Je déclare ensuite une variable `givenNumber` à l'intérieur de ma fonction et lui donne comme valeur le retour de ma fonction `prompt()`. Je remplace donc la ligne `prompt(askMessage);` par : <br>
 ```
 	let givenNumber = prompt(message);
 ```
@@ -34,7 +33,7 @@ askNumber(askMessage);
 > Pour que la variable `givenNumber` soit de type `Number` nous avons donc besoin de convertir le retour de la fonction `prompt()` de `String` à `Number`.<br>
 Il existe plusieurs méthodes pour réaliser cette conversion, mais j'utiliserai le *cast*[^castdef] `Number(maVariable)` car c'est la méthode qui me semble être la plus simple et la plus polyvalente (puisqu'il est possible d'afficher des entiers comme des décimaux, et que si le nombre n'est pas valide `NaN` (*Not a Number*) sera affiché).
 
-En prenant le cast en compte, le code ressemble finalement à ceci :
+En prenant le cast en compte, la ligne ressemble finalement à ceci :
 ```
 	let givenNumber = Number(prompt(message));
 ```
