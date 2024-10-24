@@ -38,8 +38,10 @@ En prenant le cast en compte, la ligne ressemble finalement à ceci :
 	let givenNumber = Number(prompt(askMessage));
 ```
 > [!TIP]
-> *Pour vérifier que mon code fonctionne, je peux ajouter un `console.log(givenNumber);` afin de vérifier que la valeur récupérée est la bonne, et un `console.log(typeof(givenNumber));` pour vérifier que le type est bien `Number`.* 
-Dans le cas où j'entre le nombre 5, j'obtiens donc ceci dans la console :<br><br>
+> *Pour vérifier que mon code fonctionne, je peux ajouter un `console.log(givenNumber);` afin de vérifier que la valeur récupérée est la bonne, et un `console.log(typeof(givenNumber));` pour vérifier que le type est bien `Number`.* <br>
+
+Dans le cas où j'entre le nombre 5, j'obtiens donc ceci dans la console :
+
 ![affichage dans la console de 5 puis de Number](<ressources_readme/console_step_1.png>)
 
 ## **Étape 2**
