@@ -26,7 +26,7 @@ askNumber();
 ```
 2. Je déclare ensuite une variable `givenNumber` à l'intérieur de ma fonction et lui donne comme valeur le retour de ma fonction `prompt()`. Je remplace donc la ligne `prompt(askMessage);` par : <br>
 ```
-	let givenNumber = prompt(message);
+	let givenNumber = prompt(askMessage);
 ```
 > [!NOTE]
 > La commande `prompt()` a comme valeur de retour soit l'input donné par l'utilisateur sous forme de `String`, soit `null` si la boite de dialogue a été fermée.<br>
@@ -35,11 +35,11 @@ Il existe plusieurs méthodes pour réaliser cette conversion, mais j'utiliserai
 
 En prenant le cast en compte, la ligne ressemble finalement à ceci :
 ```
-	let givenNumber = Number(prompt(message));
+	let givenNumber = Number(prompt(askMessage));
 ```
 > [!TIP]
 > *Pour vérifier que mon code fonctionne, je peux ajouter un `console.log(givenNumber);` afin de vérifier que la valeur récupérée est la bonne, et un `console.log(typeof(givenNumber));` pour vérifier que le type est bien `Number`.* 
-Dans le cas où j'entre le nombre 5, j'obtiens donc ceci dans la console :
+Dans le cas où j'entre le nombre 5, j'obtiens donc ceci dans la console :<br><br>
 ![affichage dans la console de 5 puis de Number](<ressources_readme/console_step_1.png>)
 
 ## **Étape 2**
