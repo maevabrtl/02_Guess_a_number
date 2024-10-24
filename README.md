@@ -14,7 +14,8 @@ Pour réaliser cet exercice il nous est proposé d'utiliser un [compilateur en l
 ## **Étape 1**
 
 1. Pour cette étape, j'aurais besoin d'une string à passer à mon prompteur afin demander à l'utilisateur d'entrer un nombre. Dans mon fichier `script.js`, je déclare donc une variable (c'est optionnel mais plus sympathique) telle que : `let askMessage = "Guess the number !";`.<br>
-Je crée ensuite une fonction `askNumber()`, à l'intérieur de laquelle j'utilise la commande `prompt()` avec en paramètre ma variable `message` qui sera aussi en paramètre de ma fonction `askNumber()` pour plus de lisibilité, et à laquelle je donnerai la valeur de `askMessage`.
+Je crée ensuite une fonction `askNumber()`, à l'intérieur de laquelle j'utilise la commande `prompt()` avec en paramètre ma variable `askMessage`.
+En-dessous de ma fonction, je l'appelle afin de pouvoir tester mon code.
 ```
 let askMessage = "Guess the number !";
 
@@ -29,7 +30,7 @@ askNumber(askMessage);
 	let givenNumber = prompt(message);
 ```
 > [!NOTE]
-> La commande `prompt()` a comme valeur de retour soit l'input donné par l'utilisateur sous forme de `String`, soit `null` si rien n'a été entré et que la fenêtre de prompt a été fermée.<br>
+> La commande `prompt()` a comme valeur de retour soit l'input donné par l'utilisateur sous forme de `String`, soit `null` si la boite de dialogue a été fermée.<br>
 > Pour que la variable `givenNumber` soit de type `Number` nous avons donc besoin de convertir le retour de la fonction `prompt()` de `String` à `Number`.<br>
 Il existe plusieurs méthodes pour réaliser cette conversion, mais j'utiliserai le *cast*[^castdef] `Number(maVariable)` car c'est la méthode qui me semble être la plus simple et la plus polyvalente (puisqu'il est possible d'afficher des entiers comme des décimaux, et que si le nombre n'est pas valide `NaN` (*Not a Number*) sera affiché).
 
@@ -37,9 +38,10 @@ En prenant le cast en compte, le code ressemble finalement à ceci :
 ```
 	let givenNumber = Number(prompt(message));
 ```
-Pour finir, j'appelle ma fonction : `askNumber(askMessage);`.
 > [!TIP]
-> *Pour vérifier que mon code fonctionne, je peux ajouter un `console.log(givenNumber);` afin de vérifier que la valeur récupérée est la bonne, et un `console.log(typeof(givenNumber));` pour vérifier que le type est bien `Number`.*
+> *Pour vérifier que mon code fonctionne, je peux ajouter un `console.log(givenNumber);` afin de vérifier que la valeur récupérée est la bonne, et un `console.log(typeof(givenNumber));` pour vérifier que le type est bien `Number`.* 
+Dans le cas où j'entre le nombre 5, j'obtiens donc ceci dans la console :
+![affichage dans la console de 5 puis de Number](<ressources_readme/console_step_1.png>)
 
 ## **Étape 2**
 1. 
